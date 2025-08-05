@@ -5,6 +5,7 @@ on:
    branches: 
     - master
     - 'feature**'
+    - '! develop'
    paths-ignore:
     - 'docs/**'
    tags-ignore:
