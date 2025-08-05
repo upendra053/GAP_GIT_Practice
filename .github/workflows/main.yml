@@ -1,15 +1,28 @@
 name: First Workflow
 
-on: 
+
+on:  
   push:
+   branches:
+     - master
+  
 
 jobs:
   build:
-  
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Print build
+        run: echo 'build'  
+  test:
+    runs-on: windows-latest
+    steps: 
+     - name: Print test - chrome 
+       run: echo 'test chrome'
+     - name: Print test - edge
+       run: echo 'test edge'
+
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      -name: print
-       run: echo 'Build'
-       
-       
-    
+     - name: Print deploy
+       run: echo 'deploy'
