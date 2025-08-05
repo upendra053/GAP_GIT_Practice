@@ -3,7 +3,7 @@ name: path Ignore Workflow
 on: 
   push:
    branches: 
-    - main
+    - master
     - 'feature**'
    paths-ignore:
     - 'docs/**'
