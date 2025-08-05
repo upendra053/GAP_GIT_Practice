@@ -1,11 +1,12 @@
-name: Multi event Workflow
-on: []
+name: First Workflow
+on: push
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps: 
       - name: Print build
-        run: echo 'build' 
+        run: echo 'build'  
   test:
     runs-on: windows-latest
     steps: 
@@ -18,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Print deploy
-       run: echo 'deploy'    
+       run: echo 'deploy'
