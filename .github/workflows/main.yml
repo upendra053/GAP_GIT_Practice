@@ -1,5 +1,5 @@
-name: Push Workflow
-on: push
+name: Multi event Workflow
+on: [push, issues, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
