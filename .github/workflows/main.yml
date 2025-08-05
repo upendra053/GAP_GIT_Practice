@@ -1,4 +1,4 @@
-name: First Workflow
+name: Push Workflow
 on: push
 jobs:
   build:
