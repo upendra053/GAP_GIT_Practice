@@ -1,11 +1,7 @@
 name: First Workflow
 
 
-on:  
-  push:
-   branches:
-     - master
-  
+on:  [push,issues,pull_request]
 
 jobs:
   build:
