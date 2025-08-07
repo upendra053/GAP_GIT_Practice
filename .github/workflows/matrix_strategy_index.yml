@@ -13,7 +13,6 @@ jobs:
           - index:  1
             os: windows-latest
         java-version: [17,21]
-          
     steps:
       - name: Setup Java JDK
         uses: actions/setup-java@v3.14.1
