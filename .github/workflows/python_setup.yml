@@ -1,0 +1,16 @@
+name: python set up
+
+on:
+  workflow_dispatch
+  
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: setup python
+        uses: actions/setup-python@v5.6.0
+        with: 
+          python-version: '3.13'
+      - run: python -v
+  
