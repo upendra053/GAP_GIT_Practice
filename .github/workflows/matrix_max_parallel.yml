@@ -1,0 +1,27 @@
+name: max parallel
+on:
+  workflow_dispatch
+jobs:
+  matrix-jobs:
+    runs-on: ${{matrix.os}}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - index:  0
+            total: 3
+            max-parallel: 3
+            os: ubuntu-latest
+            java-version: 17
+          - index:  1
+            os: ubuntu-latest
+            java-version: 21
+          - index:  2
+            os: windows-latest
+            java-version: 17
+    steps:
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3.14.1
+        with:
+          java-version: ${{matrix.java-version}}
+          distribution: microsoft
