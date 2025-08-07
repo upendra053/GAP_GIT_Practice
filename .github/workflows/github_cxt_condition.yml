@@ -1,0 +1,17 @@
+name: Github Context Conditional
+on: 
+  workflow_dispatch
+jobs:
+  github_context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Info about Github
+        run: 
+          echo 'github workflow ${{github.workflow}}'
+          echo 'github ref ${{github.ref}}'
+          echo 'github event name ${{github.event_name}}'
+      -  name: Examples
+         if: github.ref == 'refs/heads/master'
+         run: echo 'deploy'
+      -  if: github.event_name == 'pull_request' 
+         run: echo 'context conditional workflow triggered' 
