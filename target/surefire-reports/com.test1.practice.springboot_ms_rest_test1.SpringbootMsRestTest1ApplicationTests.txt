@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.test1.practice.springboot_ms_rest_test1.SpringbootMsRestTest1ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.550 s -- in com.test1.practice.springboot_ms_rest_test1.SpringbootMsRestTest1ApplicationTests
